@@ -48,12 +48,11 @@ export const InputTitle = styled.text`
     margin-top: 60px;
 `
 
-export const InputText = styled.input`
+export const InputTextContainer = styled.div`
     width: 100%;
-    height: 32px;
-    border: 1px solid #D9D9D9;
-    border-radius: 10px;
-    box-sizing: border-box;
+    height: auto;
+    margin-top: 25px;
+    display: flex;
 `
 
 export const PasswordItensContainer = styled.div`
@@ -61,15 +60,21 @@ export const PasswordItensContainer = styled.div`
     height: auto;
     display: flex;
     flex-direction: row;
+    background-color: beige;
 `
-
 export const TextButton = styled.div`
-     color: #0C2A92;
+    color: #0C2A92;
     cursor: pointer;
     font-weight: bold;
-    margin-left: auto;
     padding-right: 5px;
-`
+    transition: color 0.3s ease; 
+    margin-top: 5px;
+    margin-left: 5px;
+    &:hover {
+        color: #ff0000; 
+    }
+`;
+
 
 export const LoginImage = styled.img`
     width: 780px;
@@ -77,5 +82,9 @@ export const LoginImage = styled.img`
     border-top-left-radius: 30px; 
     border-bottom-left-radius: 30px; 
     margin-left: auto; 
+
+    &:hover {
+        background-color: #aabbcc; /* Altere para a cor desejada ao passar o mouse */
+    }
 
 `
