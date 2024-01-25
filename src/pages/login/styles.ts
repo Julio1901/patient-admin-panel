@@ -6,16 +6,13 @@ export const MainContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
     gap: 20px;
-
-
+ 
     @media (max-width: 839px) {
         justify-content: center;
     }
 
-    @media (max-width: 600px) {
-  
-}
 `
 
 export const LoginFormContainer = styled.div`
@@ -30,7 +27,6 @@ export const LoginFormContainer = styled.div`
     padding-left: 10px;
     padding-right: 10px;
     justify-content: center;
-
 `
 
 export const Title = styled.text`
@@ -56,8 +52,8 @@ export const SubTitle = styled.text`
 export const InputTitle = styled.text`
     @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     font-family: "Anton", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
     margin-top: 60px;
 `
 
@@ -92,7 +88,7 @@ export const TextButton = styled.div`
 
 export const LoginImage = styled.img`
     width: 70%;
-    height: 70%;
+    height: 80%;
     border-top-left-radius: 30px; 
     border-bottom-left-radius: 30px; 
     margin-left: auto; 
@@ -117,3 +113,19 @@ export const LoginImage = styled.img`
 }
 
 `
+
+export const LoginButton = styled.button`
+  margin-top: 15px;
+  background-color: #214CCE; 
+  color: #fff; 
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 5px; 
+  cursor: pointer;
+  font-size: 16px; 
+
+  &:hover {
+    background-color: #1D44B8; 
+  }
+`;
+
