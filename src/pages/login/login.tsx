@@ -7,12 +7,14 @@ import DefaultCheckbox from "../../components/defaultCheckBox/defaultCheckBox";
 import { MockDatabase } from "../../utils/mockDatabase";
 import { LoginButton } from "./styles";
 import React, { ChangeEvent, useState } from "react";
+import { useNavigate } from 'react-router-dom'
 
 export const  Login = () => {
     
     const [isChecked, setChecked] = useState<boolean>(false);
     const [login, setLogin] = useState('')
     const [password, setPassword] = useState('')
+    const navigate = useNavigate();
 
     const handleCheckboxChange = (event: ChangeEvent<HTMLInputElement>) => {
         setChecked(event.target.checked);
@@ -22,7 +24,12 @@ export const  Login = () => {
         const database = new MockDatabase
         const authorizedLogin =  database.findUser({userName: login ,password: password})
 
-        alert(authorizedLogin)
+        if(authorizedLogin){
+           navigate('main-panel')
+        }else{
+            alert('If the user exists, the password is incorrect.')
+        }
+     
     }
 
     const handleLoginChange = (event: React.ChangeEvent<HTMLInputElement>) => {
