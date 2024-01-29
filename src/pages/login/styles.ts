@@ -30,11 +30,10 @@ export const LoginFormContainer = styled.div`
 `
 
 export const Title = styled.text`
-   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;0,800;0,900;1,700;1,800;1,900&display=swap');
+font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
     font-size: 32px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-style: normal;
     padding-top: 5px;
     padding-bottom: 5px;
 `

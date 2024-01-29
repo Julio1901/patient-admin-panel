@@ -12,6 +12,7 @@ export const CustomInputText = styled.input`
     border: 1px solid #D9D9D9;
     border-radius: 10px;
     box-sizing: border-box;
+    padding-left: 5px;
 `
 
 export const InputTitle = styled.text`
