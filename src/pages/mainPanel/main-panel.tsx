@@ -3,6 +3,9 @@ import axios from 'axios';
 import { PATIENTS_ENDPOIN } from '../../common/network/endpoints';
 import { IPatient } from '../../common/network/interfaces';
 import { useEffect, useRef } from 'react';
+import { MainContainer } from './styles';
+import { DefaultLateralMenu } from '../../components/defaultLateralMenu/defaultLateralMenu';
+
 
 
 export const MainPanel = () => {
@@ -13,7 +16,6 @@ export const MainPanel = () => {
         if (!initialized.current) {
             initialized.current = true
             fetchData()
-            console.log('chamou')
         }
     }, [])
 
@@ -28,9 +30,10 @@ export const MainPanel = () => {
     }
 
     return(
-        <div>
+        <MainContainer>
+            <DefaultLateralMenu/>
             <h1>Main Panel</h1>
-        </div>
+        </MainContainer>
     )
        
         
