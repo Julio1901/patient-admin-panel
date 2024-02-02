@@ -24,7 +24,6 @@ export const DefaultHeader : React.FC<IDefaultHeader> = ({title}) => {
             <TitleContainer>
                 <HeaderTitle>{title}</HeaderTitle>
             </TitleContainer>
-           
         </MainContainer>
     )
 
