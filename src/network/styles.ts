@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const MainContainer = styled.div`
     width: fit-content;
     height: 600px;
+    flex-direction: column;
+    display: flex;
     ul {
         width: fit-content;
         height: 600px;
@@ -10,9 +12,32 @@ export const MainContainer = styled.div`
         padding: 0;
         margin: 0; 
         overflow: auto; 
-        scrollbar-color: black;
     }
+`
 
+export const ListItensInfoContainer = styled.div`
+    width: fit-content;
+    height: fit-content;
+    margin-top: 10px;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+`
+
+export const ListTitle = styled.text`
+    width: fit-content;
+    height: fit-content;
+    font-size: 40px;
+    align-self: flex-start;
+`
+
+export const ListCounter = styled.text`
+    width: fit-content;
+    height: fit-content;
+    font-size: 25px;
+    align-self: center;
+    align-self: flex-start;
+    margin-top: 10px;
 `
 
 export const PatientCardContainer = styled.div`
