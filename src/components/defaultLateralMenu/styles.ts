@@ -6,7 +6,7 @@ export const MainContainer = styled.div`
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #1E1E1E;
+    background-color: #1E90FF;
 `
 
 export const CellContainer = styled.div`
@@ -18,7 +18,7 @@ export const CellContainer = styled.div`
    
     &:hover {
         cursor: pointer;
-        background-color: #9D2062;
+        background-color: #4169E1;
     }
 `
 export const CellText = styled.text`
@@ -50,6 +50,6 @@ export const LogoContainer = styled.img`
     margin-right: 5px;
     margin-top: 10px;
     margin-bottom: 100px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255);
     border-radius: 10px;
 `

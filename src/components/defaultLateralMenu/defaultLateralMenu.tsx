@@ -8,14 +8,25 @@ import IconMedicalRecords from '../../assets/icons/icon-medical-records.png'
 import IconPrescriptions from '../../assets/icons/icon-prescriptions.png'
 import IconLabsAndTests from '../../assets/icons/iscon-labs-and-tests.png'
 import IconMessages from '../../assets/icons/icon-messages.png'
+import { useNavigate } from "react-router-dom"
 
 
 
 export const DefaultLateralMenu: React.FC = () => {
+
+
+    const navigate = useNavigate();
+
+
+    const handlePatientsClick = () => {
+        navigate('/patients-list')
+    }
+
+
     return (
         <MainContainer>
             <LogoContainer src={Logo}/>
-            <CellContainer>
+            <CellContainer onClick={handlePatientsClick}>
                 <CellIconImage src={IconPatients} />
                 <CellText>Patients</CellText>
                 <ArrowIcon src={RightArrow}/>
