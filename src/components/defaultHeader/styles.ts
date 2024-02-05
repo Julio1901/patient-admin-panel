@@ -4,6 +4,7 @@ export const MainContainer = styled.div`
     display: flex;
     width: 100%;
     height: 200px;
+    max-width: 100%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -15,7 +16,6 @@ export const TitleContainer = styled.div`
     height: fit-content;
     display: flex;
     justify-content: center;
-    position: absolute;
 `
 
 export const HeaderTitle = styled.text`
@@ -44,4 +44,5 @@ export const NameContainer = styled.div`
     margin-left: -20px;
     margin-top: 5px;
     flex-direction: row;
-`
+    white-space: nowrap;
+`;

@@ -6,7 +6,7 @@ import { ListCounter, ListItensInfoContainer, ListTitle, MainContainer, PatientC
 import FameleProfileIcon from '../assets/images/patient-profile-icon-female.png'
 import MaleProfileIcon from '../assets/images/patient-profile-icon-male.png'
 import { DefaultSearchComponent } from "../components/defaultSearchComponent/defaultSearchComponent";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const ListPatients: React.FC = () => {
   
@@ -17,18 +17,19 @@ export const ListPatients: React.FC = () => {
       'patients-list-key',
       async () => {
         const response = await axios.get<IPatient[]>(PATIENTS_ENDPOIN);
-        setPatientList(response.data || []);
-        setTotalPatients(response.data.length || 0)
-        return response.data;
+        const responseData = response.data || [];
+
+        setPatientList(responseData);
+        setTotalPatients(responseData.length || 0);
+    
+        return responseData;
       },
-      { staleTime: 300000}
+      { staleTime: 300000 }
     );
-  
-    if (isLoading) return <p>Loading...</p>;
-  
-    if (error) {
-      console.error('Error fetching data:', error);
-      return <p>Error fetching data: {(error as Error)?.message || 'Unknown error'}</p>;
+    
+    if (isLoading && !data) {
+     
+      return <p>Loading...</p>;
     }
 
     const handleWithSearchTextChange = (value: string) => {
