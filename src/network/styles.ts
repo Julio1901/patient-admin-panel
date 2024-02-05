@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MainContainer = styled.div`
     width: fit-content;
-    height: 600px;
+    height: 100%;
     flex-direction: column;
     display: flex;
     ul {
@@ -19,6 +19,7 @@ export const ListItensInfoContainer = styled.div`
     width: fit-content;
     height: fit-content;
     margin-top: 10px;
+    margin-bottom: 10px;
     display: flex;
     align-self: center;
     flex-direction: column;

@@ -8,7 +8,13 @@ import MaleProfileIcon from '../assets/images/patient-profile-icon-male.png'
 import { DefaultSearchComponent } from "../components/defaultSearchComponent/defaultSearchComponent";
 import { useEffect, useRef, useState } from "react";
 
-export const ListPatients: React.FC = () => {
+
+interface IListPatients {
+  onClick : (patient : IPatient) => void
+}
+
+
+export const ListPatients: React.FC<IListPatients> = ({onClick}) => {
   
     const [patientList, setPatientList] = useState<IPatient[]>([])
     const [totalPatients, setTotalPatients] = useState(0)
@@ -55,7 +61,7 @@ export const ListPatients: React.FC = () => {
               <ul>
                 {patientList?.map(patient => (
                   <li key={patient.id}>{
-                    <PatientCardContainer>
+                    <PatientCardContainer onClick={() => onClick(patient)}>
                         <PatientProfileIcon src={patient.gender === 'Male' ? MaleProfileIcon : FameleProfileIcon}/>
                         <PatientInfoContainer>
                           <PatientInfoText>{patient.name}</PatientInfoText>
