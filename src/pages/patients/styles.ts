@@ -46,5 +46,41 @@ export const EmptyStateContainer = styled.div`
 
 export const EmptyStateImage = styled.img`
     width: 400px;
-    height: 400px
+    height: 400px;
 `
+
+export const PatientDetailsContainer = styled.div`
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+`
+
+export const PatientDetailsImageProfile = styled.img`
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-left: 40px;
+`
+
+export const PatientDetailsInfoContainer = styled.div`
+   display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 50px;
+`
+
+export const PatientDetailsLabelText = styled.text`
+    font-size: 18px;
+    color: #1E90FF;
+    margin-top: 20px;
+`
+
+export const PatientDetailsText = styled.text`
+    font-size: 20px;
+    color: black;
+`
+

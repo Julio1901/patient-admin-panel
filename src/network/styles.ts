@@ -50,6 +50,10 @@ export const PatientCardContainer = styled.div`
     border-radius: 30px;
     margin-top: 30px;
     display: flex;
+    
+    &:hover {
+        cursor: pointer;
+    }
 `
 
 export const PatientProfileIcon = styled.img`
